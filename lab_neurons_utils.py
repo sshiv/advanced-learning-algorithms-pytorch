@@ -60,7 +60,7 @@ def plt_linear(X_train, Y_train, prediction_tf, prediction_np):
     ax[0].legend(fontsize='xx-large')
     ax[0].set_ylabel('Price (in 1000s of dollars)', fontsize='xx-large')
     ax[0].set_xlabel('Size (1000 sqft)', fontsize='xx-large')
-    ax[0].set_title("Tensorflow prediction",fontsize='xx-large')
+    ax[0].set_title("PyTorch prediction",fontsize='xx-large')
 
     ax[1].scatter(X_train, Y_train, marker='x', c='r', label="Data Points")
     ax[1].plot(X_train, prediction_np,  c=dlc['dlblue'], label="model output")
@@ -86,7 +86,7 @@ def plt_logistic(X_train, Y_train, model, set_w, set_b, pos, neg):
     ax[0].set_xlim(-0.5,5.5)
     ax[0].set_ylabel('y', fontsize=16)
     ax[0].set_xlabel('x', fontsize=16)
-    ax[0].set_title('Tensorflow Model', fontsize=20)
+    ax[0].set_title('PyTorch Model', fontsize=20)
     ax[0].legend(fontsize=16)
 
     layerf= lambda x : sigmoidnp(np.dot(set_w,x.reshape(1,1)) + set_b)
